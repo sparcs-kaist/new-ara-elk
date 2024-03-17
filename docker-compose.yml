@@ -51,9 +51,9 @@ services:
       #- ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,Z
       - elasticsearch:/usr/share/elasticsearch/data:Z
       - ./synonym.txt:/usr/share/elasticsearch/config/analysis/synonym.txt:ro,Z
-    ports:
+    #ports:
       #- 9200:9200
-      - ${ELK_CLOUD_PORT:?err}:9300
+      #- ${ELK_CLOUD_PORT:?err}:9300
     environment:
       node.name: elasticsearch
       ES_JAVA_OPTS: -Xms512m -Xmx512m

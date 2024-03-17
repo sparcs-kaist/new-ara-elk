@@ -55,7 +55,6 @@ services:
       #- 9200:9200
       - ${ELK_CLOUD_PORT:?err}:9300
     environment:
-      xpack.security.enabled: false
       node.name: elasticsearch
       ES_JAVA_OPTS: -Xms512m -Xmx512m
       # Bootstrap password.
